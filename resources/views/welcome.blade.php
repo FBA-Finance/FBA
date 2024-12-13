@@ -93,7 +93,6 @@
         <img src="{{url('/images/globe.png')}}" alt="globe" class="w-full h-auto">
     </div>
   </div>
-  
   <!-- End Hero 1 -->
   
 
@@ -133,7 +132,8 @@
   <div class="max-w-2xl mx-auto mb-10 text-center lg:mb-14">
     <h2 class="text-3xl font-bold md:text-4xl md:leading-tight" style="color: #172672">Why Choose FBA Finance ?</h2>
     <p class="mt-1 text-black">Why Choose FBA Finance?
-        Unlock growth opportunities, amplify your impact, and connect with a supportive network</p>
+        Unlock growth opportunities, amplify your impact, and connect with a supportive network
+    </p>
   </div>
   <!-- End Title -->
 
@@ -207,6 +207,172 @@
     </div>    
   </div>
 </div>
-  <!-- End Hero -->
+<!-- End Hero -->
+  
+  <!-- Begin how it works -->
+    <div class="pt-8 bg-black rounded-t-4xl">
+      <div class="max-w-2xl mx-auto mb-10 text-center lg:mb-14">
+        <h2 class="font-bold text-white text-8xl md:text-4xl md:leading-tight">How It Works?</h2>
+        <p class="pt-2 mt-1 text-gray-200">Our platform combines innovative funding with comprehensive business support, addressing the unique challenges faced by SMEs and startups. It's flexible, transparent, and designed for your growth.
+        </p>
+      </div>
+          
+      <div class="grid mx-32 gap-x-32 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+        
+        <!-- Card -->
+        <div class="flex flex-col h-full px-2 py-6 transition duration-300 border border-gray-500 w-72 rounded-3xl hover:border-indigo-600 hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg" href="#">
+          <div class="p-6">
+            <div class="flex justify-between">
+              <img src="{{url('/images/icons/black-user.png')}}" alt="house" class="h-auto pb-8 w-30">
+              <img src="{{url('/images/icons/Layer_1.png')}}" alt="one">
+            </div>
+            <div class="my-6">
+              <h2 class="text-3xl font-medium text-white dark:text-neutral-300 dark:group-hover:text-white">
+                Sign up and create your profile
+              </h2>
+              <p class="mt-5 text-white ">
+                Register on our platform and set up your business profile with essential details. Join a community of like-minded entrepreneurs.
+              </p>
+            </div>
+          </div>
+        </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="flex flex-col h-full px-2 py-6 transition duration-300 border border-gray-500 w-72 rounded-3xl hover:border-indigo-600 hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg" href="#">
+        <div class="p-6">
+          <div class="flex justify-between">
+            <img src="{{url('/images/icons/black-user.png')}}" alt="house" class="h-auto pb-8 w-30">
+            <img src="{{url('/images/icons/two.png')}}" alt="one">
+          </div>
+          <div class="my-6">
+            <h2 class="text-3xl font-medium text-white dark:text-neutral-300 dark:group-hover:text-white">
+              Contribute to the funding pool
+            </h2>
+            <p class="mt-5 text-white ">
+              Participate in our collaborative funding model by contributing to the pool, supporting other businesses while positioning yours for funding.
+            </p>
+          </div>
+        </div>
+      </div>
+    <!-- End Card -->
+
+    <!-- Card -->
+    <div class="flex flex-col h-full px-2 py-6 transition duration-300 border border-gray-500 w-72 rounded-3xl hover:border-indigo-600 hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg" href="#">
+      <div class="p-6">
+        <div class="flex justify-between">
+          <img src="{{url('/images/icons/black-user.png')}}" alt="house" class="h-auto pb-8 w-30">
+          <img src="{{url('/images/icons/three.png')}}" alt="one">
+        </div>
+        <div class="my-6">
+          <h2 class="text-3xl font-medium text-white dark:text-neutral-300 dark:group-hover:text-white">
+            Take turns receiving funds
+          </h2>
+          <p class="mt-5 text-white ">
+            Register on our platform and set up your business profile with essential details. Join a community of like-minded entrepreneurs.
+          </p>
+        </div>
+      </div>
+    </div>
+  <!-- End Card -->
+
+  <!-- Card -->
+  <div class="flex flex-col h-full px-2 py-6 transition duration-300 border border-gray-500 w-72 rounded-3xl hover:border-indigo-600 hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg" href="#">
+    <div class="p-6">
+      <div class="flex justify-between">
+        <img src="{{url('/images/icons/black-user.png')}}" alt="house" class="h-auto pb-8 w-30">
+        <img src="{{url('/images/icons/four.png')}}" alt="one">
+      </div>
+      <div class="my-6">
+        <h2 class="text-3xl font-medium text-white dark:text-neutral-300 dark:group-hover:text-white">
+          Implement growth strategies
+        </h2>
+        <p class="mt-5 text-white ">
+          Register on our platform and set up your business profile with essential details. Join a community of like-minded entrepreneurs.
+        </p>
+      </div>
+    </div>
+  </div>
+<!-- End Card -->
+
+<!-- Card -->
+<div class="flex flex-col h-full px-2 py-6 transition duration-300 border border-gray-500 w-72 rounded-3xl hover:border-indigo-600 hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg" href="#">
+  <div class="p-6">
+    <div class="flex justify-between">
+      <img src="{{url('/images/icons/black-user.png')}}" alt="house" class="h-auto pb-8 w-30">
+      <img src="{{url('/images/icons/five.png')}}" alt="one">
+    </div>
+    <div class="my-6">
+      <h2 class="text-3xl font-medium text-white dark:text-neutral-300 dark:group-hover:text-white">
+        Build credit and credibility
+      </h2>
+      <p class="mt-5 text-white ">
+        Participate in our collaborative funding model by contributing to the pool, supporting other businesses while positioning yours for funding.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- End Card -->
+
+<!-- Card -->
+<div class="flex flex-col h-full px-2 py-6 transition duration-300 border border-gray-500 w-72 rounded-3xl hover:border-indigo-600 hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg" href="#">
+  <div class="p-6">
+    <div class="flex justify-between">
+      <img src="{{url('/images/icons/black-user.png')}}" alt="house" class="h-auto pb-8 w-30">
+      <img src="{{url('/images/icons/six.png')}}" alt="one">
+    </div>
+    <div class="my-6">
+      <h2 class="text-3xl font-medium text-white dark:text-neutral-300 dark:group-hover:text-white">
+        Accelerate tech integration
+      </h2>
+      <p class="mt-5 text-white ">
+        Register on our platform and set up your business profile with essential details. Join a community of like-minded entrepreneurs.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- End Card -->
+
+<!-- Card -->
+<div class="flex flex-col h-full px-2 py-6 transition duration-300 border border-gray-500 w-72 rounded-3xl hover:border-indigo-600 hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg" href="#">
+  <div class="p-6">
+    <div class="flex justify-between">
+      <img src="{{url('/images/icons/black-user.png')}}" alt="house" class="h-auto pb-8 w-30">
+      <img src="{{url('/images/icons/seven.png')}}" alt="one">
+    </div>
+    <div class="my-6">
+      <h2 class="text-3xl font-medium text-white dark:text-neutral-300 dark:group-hover:text-white">
+        Grow without losing ownership
+      </h2>
+      <p class="mt-5 text-white ">
+        Access personalized mentorship, financial advice, and operational strategies tailored to your business needs.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- End Card -->
+
+<!-- Card -->
+<div class="flex flex-col h-full px-2 py-6 transition duration-300 border border-gray-500 w-72 rounded-3xl hover:border-indigo-600 hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg" href="#">
+  <div class="p-6">
+    <div class="flex justify-between">
+      <img src="{{url('/images/icons/black-user.png')}}" alt="house" class="h-auto pb-8 w-30">
+      <img src="{{url('/images/icons/eight.png')}}" alt="one">
+    </div>
+    <div class="my-6">
+      <h2 class="text-3xl font-medium text-white dark:text-neutral-300 dark:group-hover:text-white">
+        Sign up and create your profile
+      </h2>
+      <p class="mt-5 text-white ">
+        Register on our platform and set up your business profile with essential details. Join a community of like-minded entrepreneurs.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- End Card -->
+  
+      </div>
+    </div>
+  <!-- End how it works -->
 </body>
 </html>
