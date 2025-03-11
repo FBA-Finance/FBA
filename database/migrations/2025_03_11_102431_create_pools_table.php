@@ -11,12 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
+        if (!Schema::hasTable('users')) {
+            throw new \Exception('Users table must exist before pools.');
+        }
+        
         Schema::create('pools', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->decimal('amount', 10, 2);
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->integer('cycle_days');
-            $table->unsignedBigInteger('creator_id');
             $table->timestamps();
         });
     }

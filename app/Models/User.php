@@ -19,6 +19,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'username',
         'email',
         'password',
     ];
@@ -45,4 +46,14 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function createdPools(){
+        return $this->hasMany(Pool::class, 'creator_id');
+    }
+
+    public function poolMembership()
+    {
+        return $this->hasOne(PoolMember::class);
+    }
+            
 }
