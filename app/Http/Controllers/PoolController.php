@@ -6,19 +6,23 @@ use Illuminate\Http\Request;
 
 class PoolController extends Controller
 {
-    public function createPool(Request $request){
-        $request->validate([
-           'name' => 'required|string|max:255',
-           'amount' => 'required|numeric|min:0', 
-           'cycle_days' => 'required|integer|min:1',
-        ]);
+    // List all pools
+    public function index(){
+        //
     }
-
-    public function listPools(){
+    
+    // create a new pool
+    public function store(){
         //
     }
 
-    public function showPool(){
+    //show a specific pool
+    public function show(){
+        //
+    }
+
+    //accept a user's join request (only the pool creator)
+    public function acceptMember(){
         //
     }
 }
