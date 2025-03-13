@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pool;
+use App\Models\PoolMember;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -35,7 +36,22 @@ class PoolController extends Controller
     }
 
     //accept a user's join request (only the pool creator)
-    public function acceptMember(){
-        //
+    public function acceptMember(Request $request, $poolId){
+        $pool = Pool::where('id', $poolId)->where('user_id', Auth::id())->firstOrFail();
+
+        $member = PoolMember::where('pool_id', $poolId)
+                            ->where('user_id', $request->user_id)
+                            ->where('status', 'pending')
+                            ->first();
+
+        if (!$member) {
+            return response()->json(['message' => 'No pending request found'], 404);
+        }
+
+        // Approving the member
+        $nextPosition = PoolMember::where('pool_id', $poolId)->count() + 1;
+        $member->update(['status' => 'approved', 'rotation_order' => $nextPosition]);
+
+        return response()->json(['message' => 'Member added successfully!', 'member' => $member]);
     }
 }
