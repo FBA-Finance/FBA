@@ -20,9 +20,10 @@ Route::middleware('auth')->group(function () {
 
 //Pool Routes
 Route::middleware('auth:sanctum')->group(function() {
-    Route::post('/pools', [PoolController::class, 'createPool']);
-    Route::get('/pools', [PoolController::class, 'listPools']);
-    Route::get('/pools/{pool}', [PoolController::class, 'showPool']);
+    Route::post('/pools', [PoolController::class, 'store']); //create new pool
+    Route::get('/pools', [PoolController::class, 'index']); //list all pools
+    Route::get('/pools/{pool}', [PoolController::class, 'show']); //show a specific pool
+    Route::patch('/pools/{pool}/accept/{user}', [PoolController::class, 'acceptRequest']); // Accept join request (pool creator only)
 });
 
 require __DIR__.'/auth.php';

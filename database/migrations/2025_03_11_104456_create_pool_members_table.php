@@ -17,6 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('pool_id');
             $table->integer('rotation_order');
             $table->boolean('received_payout')->default(false);
+            $table->string('status')->default('pending');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
