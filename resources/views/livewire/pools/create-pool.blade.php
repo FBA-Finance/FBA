@@ -1,3 +1,65 @@
-<div>
-    {{-- Close your eyes. Count to one. That is how long forever feels. --}}
+<div class="max-w-2xl p-6 mx-auto bg-white rounded-lg shadow-lg">
+    <h2 class="mb-4 text-2xl font-semibold text-gray-800">Create a Pool</h2>
+
+    @if (session()->has('message'))
+        <div class="p-3 mb-4 text-green-700 bg-green-100 rounded-lg">
+            {{ session('message') }}
+        </div>
+    @endif
+
+    <form wire:submit.prevent="createPool">
+        @csrf
+
+        <div class="mb-4">
+            <label for="name" class="block text-gray-700">Pool Name</label>
+            <input type="text" id="name" wire:model="name" class="w-full p-2 border rounded">
+            @error('name') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+        </div>
+
+        <div class="mb-4">
+            <label for="amount" class="block text-gray-700">Amount</label>
+            <input type="number" id="amount" wire:model="amount" class="w-full p-2 border rounded">
+            @error('amount') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+        </div>
+
+        <div class="mb-4">
+            <label for="cycle_days" class="block text-gray-700">Cycle Days</label>
+            <input type="number" id="cycle_days" wire:model="cycle_days" class="w-full p-2 border rounded">
+            @error('cycle_days') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+        </div>
+
+        <div class="mb-4">
+            <label for="max_participants" class="block text-gray-700">Max Participants (Optional)</label>
+            <input type="number" id="max_participants" wire:model="max_participants" class="w-full p-2 border rounded">
+            @error('max_participants') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+        </div>
+
+        <div class="mb-4">
+            <label for="min_participants" class="block text-gray-700">Min Participants (Optional)</label>
+            <input type="number" id="min_participants" wire:model="min_participants" class="w-full p-2 border rounded">
+            @error('min_participants') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+        </div>
+
+        <div class="mb-4">
+            <label for="start_date" class="block text-gray-700">Start Date</label>
+            <input type="date" id="start_date" wire:model="start_date" class="w-full p-2 border rounded">
+            @error('start_date') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+        </div>
+
+        <div class="mb-4">
+            <label for="end_date" class="block text-gray-700">End Date</label>
+            <input type="date" id="end_date" wire:model="end_date" class="w-full p-2 border rounded">
+            @error('end_date') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+        </div>
+
+        <div class="mb-4">
+            <label for="next_payment_date" class="block text-gray-700">Next Payment Date</label>
+            <input type="date" id="next_payment_date" wire:model="next_payment_date" class="w-full p-2 border rounded">
+            @error('next_payment_date') <span class="text-sm text-red-500">{{ $message }}</span> @enderror
+        </div>
+
+        <button type="submit" class="w-full p-2 text-white bg-blue-600 rounded hover:bg-blue-700">
+            Create Pool
+        </button>
+    </form>
 </div>

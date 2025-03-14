@@ -55,5 +55,10 @@ class User extends Authenticatable
     {
         return $this->hasOne(PoolMember::class);
     }
+
+    public function pools()
+{
+    return $this->hasMany(Pool::class);
+}
             
 }
