@@ -4,6 +4,7 @@ namespace App\Livewire\Pools;
 
 use Livewire\Component;
 use App\Models\Pool;
+use App\Models\PoolMember;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
 use Carbon\Carbon;
@@ -56,7 +57,16 @@ class CreatePool extends Component
     // ]);
 
     //Auth::user()->pools()->create($this->validate()); // ✅ AUTO-ASSIGN user_id
-    Auth::user()->pools()->create($this->validate()); // ✅ AUTO-ASSIGN user_id
+    $pool = Auth::user()->pools()->create($this->validate()); // ✅ AUTO-ASSIGN user_id
+
+    // Automatically add the creator as a pool member
+    PoolMember::create([
+        'user_id' => Auth::id(),
+        'pool_id' => $pool->id,
+        'rotation_order' => 1, // Since they are the first member, they get position 1
+        'received_payout' => false, // Assuming they haven’t received a payout yet
+        'status' => 'approved', // Assuming they are automatically approved
+    ]);
 
     session()->flash('message', 'Pool created successfully!');
     return redirect()->route('pools.index');
