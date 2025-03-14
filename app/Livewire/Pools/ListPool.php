@@ -10,10 +10,10 @@ class ListPool extends Component
 {
     public function render()
     {
-        $pools = Pool::where('user_id', Auth::id())
-            ->orWhereHas('members', function ($query) {
-                $query->where('user_id', Auth::id());
-            })->get();
+        $pools = Pool::where('user_id', Auth::id()) 
+    ->orWhereHas('members', function ($query) {
+        $query->where('user_id', Auth::id()); // ✅ This now queries PoolMember correctly
+    })->get();
 
         return view('livewire.pools.list-pool', compact('pools'));
     }

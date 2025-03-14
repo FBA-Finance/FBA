@@ -13,14 +13,20 @@ class Pool extends Model
         'name',
         'amount',
         'cycle_days',
-        'creator_id',
+        'user_id',
+        'max_participants',
+        'min_participants',
+        'start_date',
+        'end_date',
+        'next_payment_date',
     ];
 
     public function creator(){
-        return $this->belongsTo(User::class, 'creator_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function members(){
-        return $this->hasMany(User::class);
+        return $this->hasMany(PoolMember::class);
     }
+
 }

@@ -13,7 +13,7 @@ class PoolMember extends Model
         'user_id',
         'pool_id',
         'rotation_order',
-        'received_payout',
+        'received_payout', 
     ];
 
     //a pool member belongs to a user
