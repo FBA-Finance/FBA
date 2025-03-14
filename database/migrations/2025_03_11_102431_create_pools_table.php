@@ -21,6 +21,11 @@ return new class extends Migration
             $table->decimal('amount', 10, 2);
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->integer('cycle_days');
+            $table->integer('max_participants')->nullable();
+            $table->integer('min_participants')->nullable();
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
+            $table->date('next_payment_date')->nullable();
             $table->timestamps();
         });
     }
