@@ -26,6 +26,7 @@ return new class extends Migration
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
             $table->date('next_payment_date')->nullable();
+            $table->string('invite_token')->unique()->nullable();
             $table->timestamps();
         });
     }

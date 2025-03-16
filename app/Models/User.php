@@ -60,5 +60,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Pool::class);
     }
+
+    public function joinedPools()
+    {
+        return $this->belongsToMany(Pool::class, 'pool_participants');
+    }
             
 }

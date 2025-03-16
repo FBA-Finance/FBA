@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Pools;
 
+use Illuminate\Support\Str;
 use Livewire\Component;
 use App\Models\Pool;
 use App\Models\PoolMember;
@@ -66,6 +67,7 @@ class CreatePool extends Component
         'rotation_order' => 1, // Since they are the first member, they get position 1
         'received_payout' => false, // Assuming they haven’t received a payout yet
         'status' => 'approved', // Assuming they are automatically approved
+        'invite_token' => Str::random(32)
     ]);
 
     session()->flash('message', 'Pool created successfully!');

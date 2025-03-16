@@ -47,4 +47,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/pools/{pool}/accept', AcceptPoolRequests::class)->name('pools.accept');
 });
 
+Route::get('/pools/join/{token}', JoinPool::class)->name('pools.join');
+
 require __DIR__.'/auth.php';

@@ -9,6 +9,13 @@
         <p><strong>Members:</strong> {{ $pool->members->count() }}</p>
     </div>
 
+    @if($pool->invite_token)
+    <div class="p-3 mt-4 bg-gray-100 rounded">
+        <p class="text-sm text-gray-700">Invite Link:</p>
+        <input type="text" value="{{ route('pools.join', $pool->invite_token) }}" class="w-full p-2 text-sm border rounded" readonly>
+    </div>
+    @endif
+
     <a href="{{ route('pools.index') }}" class="inline-block mt-6 text-blue-600 hover:underline">
         ← Back to Pools
     </a>
