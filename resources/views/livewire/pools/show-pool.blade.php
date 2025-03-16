@@ -6,7 +6,7 @@
         <p><strong>Start Date:</strong> {{ $pool->start_date }}</p>
         <p><strong>End Date:</strong> {{ $pool->end_date }}</p>
         <p><strong>Next Cycle:</strong> {{ $pool->next_cycle_date }}</p>
-        <p><strong>Members:</strong> {{ $pool->members->count() }}</p>
+        <p><strong>Members:</strong> {{ $pool->members()->count() }}</p>
     </div>
 
     @if($pool->invite_token)

@@ -63,7 +63,7 @@ class User extends Authenticatable
 
     public function joinedPools()
     {
-        return $this->belongsToMany(Pool::class, 'pool_participants');
+        return $this->belongsToMany(Pool::class, 'pool_members');
     }
             
 }
