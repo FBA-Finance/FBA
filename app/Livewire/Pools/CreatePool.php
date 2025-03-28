@@ -70,6 +70,8 @@ class CreatePool extends Component
         'invite_token' => Str::random(32)
     ]);
 
+    // work on fine tunining the process !!!
+
     session()->flash('message', 'Pool created successfully!');
     return redirect()->route('pools.index');
 }
