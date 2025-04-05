@@ -8,3 +8,4 @@
 - Wallet and Deposit systems
 - Withdrawal system 1
 - Add more APIs for withdrawals
+- Work on product marketing and social sharing
