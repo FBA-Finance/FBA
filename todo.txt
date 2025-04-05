@@ -2,3 +2,7 @@
 - List Pools
 - Join Pools
 - Invite link to Join Pools
+- Polish UI for the above functionality
+- Pool Cycles working within the stipulated constraints
+- Notifications for the Cycles
+
