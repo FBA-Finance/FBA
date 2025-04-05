@@ -5,4 +5,6 @@
 - Polish UI for the above functionality
 - Pool Cycles working within the stipulated constraints
 - Notifications for the Cycles
+- Wallet and Deposit systems
+- Withdrawal system 1
 
