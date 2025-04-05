@@ -10,3 +10,6 @@
 - Add more APIs for withdrawals
 - Work on product marketing and social sharing
 - Polish the UIs for all the above
+- Work more on profiles, and social features
+    - messaging
+    - picture upload
