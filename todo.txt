@@ -13,3 +13,4 @@
 - Work more on profiles, and social features
     - messaging
     - picture upload
+- Leaderboards and savings history
